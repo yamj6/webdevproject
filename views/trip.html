@@ -15,8 +15,11 @@
     <meta name="description" content="Annie Min 67-250 Web Development Project">
     <title>The Duquesne Incline Website</title>
 </head>
-<body class="open-sans-project">
-    <header>
+<body onload="showCopyright()">
+    <div>
+        <img class="headerImg" src="../static/duqInc-upper.jpg" alt="duquesne incline upper view">
+    </div>
+    <header class="navColor">
         <nav>
             <a class="navTitle" href="../index.html" target="_self">Home</a>
             <a class="navTitle" href="trip.html" target="_self">Trips/Tours</a>
@@ -26,9 +29,68 @@
         </nav>
     </header>
     <div class="main">
-        <h1>The Duquesne Incline</h1>
+        <h1>Trips and Tours</h1>
+        <h2>Field Trip Program for Students and Youth Groups:</h2>
     </div>
-    <footer>
+    <div class="fieldTrip">
+        <div>
+            <p>
+                A free field trip program is available for students and youth groups of ten or more daily - 
+                except Saturdays and Sundays after 12:00 noon due to weekend crowds and limited space. 
+                The program includes: <br>
+                <ul id="fieldTripList">
+                    <li>A teacher's lesson packet for students' specific grade level</li>
+                    <li>A round trip ride on the Duquesne Incline</li>
+                    <li>A history of inclines in Pittsburgh</li>
+                    <li>A discussion about Pittsburgh's industrial past</li>
+                    <li>A visit to the machine room to observe the original hoisting equipment in operation and 
+                    learn about the engineers who built it</li>
+                    <li>A panoramic view of Downtown Pittsburgh and The North Shore from our observation deck 400 
+                    feet above the three rivers</li>
+                    <li>A brief history of the French and Indian War from which the city arose</li>
+                </ul>
+            </p>
+        </div>
+        <img class="tripsImg" src="../static/trips-tours-page.jpg" alt="people inside the lift">
+    </div>
+    <div>
+        <h2>City Tours:</h2>
+        <p>Click any of the links for more information!</p>
+        <div class="imgLinks">
+            <a class="molly" href="https://www.mollystrolleyspgh.com/" target="_blank">
+                <img id="trollyImg" src="../static/mollyTrolly.png" alt="Molly's Trolly image">
+                <p>
+                    MOLLY'S TOLLEYS - 412-281-2055
+                </p>
+            </a>
+            <a class="steel" href="https://riversofsteel.com/" target="_blank">
+                <img id="steelImg" src="../static/rivers-of-steel.png" alt="Deer made from wires image">
+                <p>
+                    RIVERS OF STEEL - 412-464-4020 or 412-381-8687
+                </p>
+            </a>
+            <a class="pgh" href="https://www.pghtours.com/" target="_blank">
+                <img id="pghImg" src="../static/pghTour.png" alt="pgh tour bus image">
+                <p>
+                    THE PITTSBURGH TOUR COMPANY - 412-381-8687 
+                </p>
+            </a>
+        </div>
+        
+    </div>
+    <div class="groupFares">
+        <h2>Group Rates:</h2>
+        <p>
+            Group Rates are Valid for Any Group of Ten or More People <br>
+            Adults (Ages 12-64): $1.75 Each Way or $3.50 Round Trip <br>
+            Children (Ages 6-11): $1.00 Each Way or $1.75 Round Trip <br><br>
+
+            Cash fares as well as Port Authority bus passes and tickets are accepted as payment. <br>
+            Seniors age 65 or older who present a blue or yellow PRT card or a Senior Connect Card ride free. <br>
+            Wheelchair accessibility is via the Upper Station located 1220 Grandview Avenue Pittsburgh, Pa. 15211.
+        </p>
+    </div>
+    <footer class="footer">
         <p id="footerInfo"></p>
     </footer>
 </body>

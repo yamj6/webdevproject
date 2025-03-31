@@ -15,8 +15,11 @@
     <meta name="description" content="Annie Min 67-250 Web Development Project">
     <title>The Duquesne Incline Website</title>
 </head>
-<body class="open-sans-project">
-    <header>
+<body onload="showCopyright()">
+    <div>
+        <img class="headerImg" src="../static/duqInc-upper.jpg" alt="duquesne incline upper view">
+    </div>
+    <header class="navColor">
         <nav>
             <a class="navTitle" href="../index.html" target="_self">Home</a>
             <a class="navTitle" href="trip.html" target="_self">Trips/Tours</a>
@@ -25,10 +28,47 @@
             <a class="navTitle" href="citation.html" target="_self">Citation</a>
         </nav>
     </header>
-    <div class="main">
-        <h1>The Duquesne Incline</h1>
+    <div>
+        <h1>Contact Us!</h1>
     </div>
-    <footer>
+    <div class="contactAndLogo">
+        <p>
+            1197 West Carson Street, Pittsburgh, PA 15219 <br><br>
+            Phone Number: 412.381.1665 <br>
+            Fax: 412.381.1943 <br>
+            <a href="mailto:duq.incline@duquesneincline.org">duq.incline@duquesneincline.org</a> <br><br>
+            Mailing Address and Wheelchair Acessibility: <br>
+            1220 Grandview Ave. <br>
+            Pittsburgh, PA. 15211
+        </p>
+        <img id="logo" src="../static/DuqInclineLogo.png" alt="duquesne incline logo">
+    </div>
+
+    <!-- mailing list form -->
+    <div class="mailingListForm">
+        <h3>Interested in joining our mailing list?</h3>
+        <p>Recieve information about our upcoming events and promotions!</p>
+        <form>
+            <label for="fullname">Your name:</label>
+            <input type="text" id="fullname" name="fullname" required><br>
+
+            <label for="email">Your email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <input type="checkbox" id="yes" name="yes" value="yes">
+            <label for="checkbox">Recieve messages via SMS text (optional)</label><br>
+
+            <label for="phone">Phone Number (optional):</label>
+            <input type="number" name="phone" id="phone" min="0" max="999999999999">
+
+            <label for="zip">Zip code (optional):</label>
+            <input type="number" name="zip" id="zip" min="0" max="99999"> <br>
+
+            <input type="submit" value="Submit" onclick="validate()">
+            <p id="failValidate"></p>
+        </form>
+    </div>
+    <footer class="footer">
         <p id="footerInfo"></p>
     </footer>
 </body>

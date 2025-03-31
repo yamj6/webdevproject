@@ -1,151 +1,85 @@
-.open-sans-project {
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-    font-variation-settings:
-      "wdth" 100;
-    color: #31352e;
+/* add font and overall style */
+* {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  color: #31352e;
+
+  margin: 5px;
+  padding: 5px;
 }
 
-* {box-sizing:border-box}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 400px;
-  position: relative;
+/* fit header */
+.headerImg {
+  display: block;
   margin: auto;
-}
-
-.slideshowImage1 {
-  width: 100%;
-}
-.slideshowImage2 {
-  width: 100%;
-}
-.slideshowImage3 {
-  width: 100%;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
   width: 100%;
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-/* * {
-    background-color: #e9e6e2;
-} */
-
-.upperStationPicture {
-  display: block;
-  margin: auto;
-}
-
-a.navTitle {
+/* style nav links */
+.navTitle {
   text-decoration: none;
   color: #ebebe8;
   margin-right: 15px;
+  /* background-color: #535e4b; */
 }
-
-.navTitle {
-  margin: 5px;
-  padding: 5px;
+/* Style the navbar */
+.navColor {
   background-color: #535e4b;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
 }
 
-#navColor {
-  margin: 5px;
-  padding: 5px;
-  background-color: #535e4b;
+/* customize Home page layout */
+.indexTextAndImg {
+  background-color: #e9e6e2;
 }
-
-#faresBackground {
-  margin: 5px;
-  padding: 5px;
-  background-color: #b5a4a3;
+.store {
+  background-color: #c1c2ad;
 }
-
-#faresTable {
-  width: 40%;
+.indexTextAndImg, .locationAndYoutube, .hoursAndFares, .giftStore {
+  display: flex;
+  justify-content: space-evenly;
 }
-#faresTableHeader {
-  width: 45%;
+.giftStore {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  text-align: center;
 }
-
+#upperStationImg {
+  display: block;
+  margin: auto;
+  width: 30%;
+  height: auto;
+}
+#shotGlassImg, #woodCarImg, #metalPlatesImg {
+  width: 300px;
+}
+#location {
+  display: block;
+  margin: auto;
+  width: 450px;
+  height: 350px;
+}
+.yt, .fares {
+  display: block;
+  margin: auto;
+  width: fit-content;
+}
+.hours {
+  display: block;
+  width: fit-content;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: auto;
+}
+/* customize fares table */
 th {
   padding: 12px;
   background-color: #b5a4a3;
@@ -159,13 +93,99 @@ td:nth-child(odd) {
   background-color: #b5a4a3;
 }
 
-#hoursBackground {
-  margin: 5px;
-  padding: 5px;
+/* tour page group fares styling*/
+.groupFares {
+  background-color: #d1e2c4;
+  width: fit-content;
+  display: block;
+  margin: auto;
+}
+/* list style */
+#fieldTripList {
+  margin-left: 30px;
+}
+/* put text and img side by side */
+.fieldTrip {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #e9e6e2;
+}
+/* adjust img size */
+.tripsImg {
+  display: block;
+  margin: auto;
+  width: 60%;
+  height: auto;
+}
+/* adjust image layout */
+.imgLinks {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+#trollyImg, #steelImg, #pghImg {
+  display: block;
+  margin: auto;
+  width: 60%;
+  height: auto;
+}
+/* create borders */
+.molly, .steel, .pgh {
+  border-color: #535e4b;
+  border-style: solid;
+  border-radius: 5px;
+}
+.imgLinks a:hover {
+  border-color: #ddd;
+}
+
+/* contact page split */
+.contactAndLogo {
+  display: flex;
+  flex-wrap: nowrap;
+}
+#logo {
+  display: block;
+  margin: auto;
+  width: 30%;
+}
+/* contact page mailing form style */
+.mailingListForm {
+  padding: 10px;
+  margin: auto;
+  background-color: #b5a4a3;
+  width: fit-content;
+}
+/* validation fail message format */
+#failValidate {
+  text-align: center;
+}
+
+/* about page split text and image */
+.aboutFlex {
+  display: flex;
+  flex-wrap: nowrap;
   background-color: #d1e2c4;
 }
-#hoursBackground2 {
-  margin: 5px;
-  padding: 5px;
-  background-color: #d1e2c4;
+
+/* split facts and links */
+.factsAndLinks {
+  display: flex;
+  flex-wrap: nowrap;
+}
+/* create border for facts */
+#facts, #links {
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  margin: auto;
+  width: 30%;
+  background-color: #c1c2ad;
+}
+/* footer color */
+.footer {
+  background-color: #535e4b;
+}
+#footerInfo {
+  color: #ebebe8;
 }

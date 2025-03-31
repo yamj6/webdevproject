@@ -1,25 +1,38 @@
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 5000); // Change image every 5 seconds
-}
-
+// copyright footer
 function showCopyright(){
   var d = new Date();
   var year = d.getFullYear();
-  document.getElementById("copyright").innerHTML = "Copyright©" + year;
+  document.getElementById("footerInfo").innerHTML = "Copyright©" + year;
 }
 
-function showFooter(){
-  document.getElementById("footerInfo").innerHTML = "";
+// nav bar color change when hover
+$(document).ready(function(){
+  $("a.navTitle").hover(function(){
+    $(this).css("background-color", "#e9e6e2");
+    $(this).css("color", "#31352e");
+    }, function(){
+    $(this).css("background-color", "#535e4b");
+    $(this).css("color", "#ebebe8");
+  });
+});
+
+// show map
+function myMap() {
+  var mapProp= {
+    center:new google.maps.LatLng(40.440523405936744, -80.01734476139315),
+    zoom:15,
+  };
+  var map = new google.maps.Map(document.getElementById("location"),mapProp);
+  const marker = new google.maps.Marker({
+    map,
+    position: { lat: 40.440523405936744, lng: -80.01734476139315 },
+  });
 }
-showFooter();
+
+function validate(){
+    let userName = document.getElementById("fullname");
+    let userEmail = document.getElementById("email");
+    if (!userName.checkValidity() || !userEmail.checkValidity()) {
+        document.getElementById("failValidate").innerHTML = "Please fill out all the fields in the form.";
+    }
+}
